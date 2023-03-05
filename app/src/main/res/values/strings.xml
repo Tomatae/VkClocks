@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VkClocks</string>
+    <string name="town">Saint Petersburg</string>
+    <string name="weather">27 °C, сильный снег</string>
+    <string name="wind">С-З 11.3 км/ч</string>
+    <string name="defaultDate">01/01/1970</string>
+    <string name="defaultTime">00:00:00</string>
+</resources>
