@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+/app/build
+/gradle
+/app/src/test/
+/app/src/androidTest/
+/.idea
