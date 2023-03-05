@@ -23,23 +23,12 @@ public class MainActivity extends AppCompatActivity {
         TextView dateText2 = findViewById(R.id.date2);
         TextView timeText2 = findViewById(R.id.time2);
 
-        TextView dateText3 = findViewById(R.id.date3);
-        TextView timeText3 = findViewById(R.id.time3);
-
         String date = String.valueOf(calendar.get(Calendar.DATE));
-        String time = String.valueOf(calendar.get(Calendar.HOUR)) + ":" + String.valueOf(calendar.get(Calendar.MINUTE)) + ":" + String.valueOf(calendar.get(Calendar.SECOND));
+        String time = calendar.get(Calendar.HOUR) + ":" + calendar.get(Calendar.MINUTE) + ":" + calendar.get(Calendar.SECOND);
         dateText.setText(date);
         timeText.setText(time);
 
         dateText2.setText(date);
         timeText2.setText(time);
-
-        dateText3.setText(date);
-        timeText3.setText(time);
     }
-
-    public void changeActivity(Class<?> c) {
-        startActivity(new Intent(this, c));
-    }
-
 }

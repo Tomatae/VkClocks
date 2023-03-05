@@ -7,10 +7,10 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class Clocks extends View {
-    private Paint clockPaint;
-    private Paint handPaint;
-    private Paint mHandPaint;
-    private Paint sHandPaint;
+    private final Paint clockPaint;
+    private final Paint handPaint;
+    private final Paint mHandPaint;
+    private final Paint sHandPaint;
 
     public Clocks(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -42,14 +42,14 @@ public class Clocks extends View {
         int centerX = width / 2;
         int centerY = height / 2;
         long now = System.currentTimeMillis();
-        int hours = (int) ((now / (1000 * 60 * 60)) % 24);
+        int hours = (int) ((now / (1000 * 60 * 60)) % 12);
         int minutes = (int) ((now / (1000 * 60)) % 60);
         int seconds = (int) ((now / 1000) % 60);
 
         canvas.drawCircle(centerX, centerY, radius, clockPaint);
 
         canvas.save();
-        canvas.rotate(15 * (hours + timeShift) + 0.25f * minutes + 0.0083f * seconds, centerX, centerY);
+        canvas.rotate(30 * (hours + timeShift) + 0.25f * minutes + 0.0083f * seconds, centerX, centerY);
         canvas.drawLine(centerX, centerY, centerX, (float) (centerY - radius * 0.45), handPaint);
         canvas.restore();
 

@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <com.example.vkclocks.Clocks
+        android:layout_margin="16dp"
         android:id="@+id/clocks"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -55,6 +56,14 @@
             android:text="@string/defaultTime" />
     </LinearLayout>
 
+    <ImageView
+        android:src="@drawable/background"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="@+id/clocks"
+        app:layout_constraintTop_toBottomOf="@+id/clocks"
+        />
+
     <com.example.vkclocks.Clocks
         android:id="@+id/clocks2"
         android:layout_width="200dp"
@@ -99,64 +108,6 @@
 
         <TextView
             android:id="@+id/time2"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="@string/defaultTime" />
-    </LinearLayout>
-
-
-    <ImageView
-        android:src="@drawable/background"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintStart_toStartOf="@+id/clocks2"
-        app:layout_constraintTop_toBottomOf="@+id/clocks2"
-        />
-
-    <com.example.vkclocks.Clocks
-        android:id="@+id/clocks3"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintStart_toStartOf="@+id/clocks2"
-        app:layout_constraintTop_toBottomOf="@+id/clocks2" />
-
-    <LinearLayout
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/clocks3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toEndOf="@+id/clocks3"
-        app:layout_constraintTop_toTopOf="@+id/clocks3"
-        app:layout_constraintVertical_bias="1.0">
-
-        <TextView
-            android:id="@+id/location3"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="@string/town" />
-
-        <TextView
-            android:id="@+id/weather3"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="@string/weather" />
-
-        <TextView
-            android:id="@+id/wind3"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="@string/wind" />
-
-        <TextView
-            android:id="@+id/date3"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="@string/defaultDate" />
-
-        <TextView
-            android:id="@+id/time3"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="@string/defaultTime" />
